@@ -9,6 +9,20 @@ export class PostContainerComponent {
   posts = [
     { title: "something" },
     { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
+    { title: "something" },
     { title: "something" }
   ];
 }

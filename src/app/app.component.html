@@ -1,12 +1,10 @@
 <nav>
-  <mat-toolbar color="primary" role="header">Hacker News</mat-toolbar>
+  <mat-toolbar color="primary" role="header">Insight</mat-toolbar>
 </nav>
 
-<mat-grid-list cols="2" rowHeight="1:1">
-  <mat-grid-tile>
-    <post-container></post-container>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    sth
-  </mat-grid-tile>
-</mat-grid-list>
+<div>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+    <post-container fxFlex fxFlexOrder="1"></post-container>
+    <post-container fxFlex="1 2 60em" fxFlexOrder="2"></post-container>
+  </div>
+</div>

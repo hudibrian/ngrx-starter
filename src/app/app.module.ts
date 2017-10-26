@@ -12,6 +12,7 @@ import {
   MatCardModule,
   MatGridListModule
 } from "@angular/material";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import {
     AngularFireDatabaseModule,
     MatToolbarModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    FlexLayoutModule
   ],
   declarations: [AppComponent, PostContainerComponent, PostListComponent],
   providers: [],
