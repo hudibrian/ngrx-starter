@@ -13,6 +13,8 @@ import {
   MatGridListModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LayoutContainerComponent } from './containers/layout-container/layout-container.component';
 
 @NgModule({
   imports: [
@@ -24,7 +26,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatGridListModule,
     FlexLayoutModule
   ],
-  declarations: [AppComponent, PostContainerComponent, PostListComponent],
+  declarations: [
+    AppComponent,
+    PostContainerComponent,
+    PostListComponent,
+    NavbarComponent,
+    LayoutContainerComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
