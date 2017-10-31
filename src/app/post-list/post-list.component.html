@@ -1,5 +1,5 @@
-<div class="post-list" fxLayout="column" fxLayoutGap="10px">
-  <mat-card class="hn-post-card" fxFlex *ngFor="let post of posts">
+<div class="post-list" fxLayout="column">
+  <mat-card class="hn-post-card" *ngFor="let post of posts">
     <mat-card-title>{{post.title}}</mat-card-title>
     <mat-card-content>
       preview text

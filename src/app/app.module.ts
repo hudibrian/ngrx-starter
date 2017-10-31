@@ -14,7 +14,6 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LayoutContainerComponent } from './containers/layout-container/layout-container.component';
 
 @NgModule({
   imports: [
@@ -30,8 +29,7 @@ import { LayoutContainerComponent } from './containers/layout-container/layout-c
     AppComponent,
     PostContainerComponent,
     PostListComponent,
-    NavbarComponent,
-    LayoutContainerComponent
+    NavbarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
