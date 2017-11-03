@@ -14,12 +14,13 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HackerNewsServiceService } from './services/hacker-news/hacker-news.service';
+import { Http, HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.hackernewsFirebase),
-    AngularFireDatabaseModule,
+    HttpModule,
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
@@ -31,7 +32,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     PostListComponent,
     NavbarComponent
   ],
-  providers: [],
+  providers: [HttpModule, HackerNewsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
