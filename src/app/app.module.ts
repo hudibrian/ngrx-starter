@@ -10,7 +10,8 @@ import { PostContainerComponent } from './containers/postContainer/postContainer
 import {
   MatToolbarModule,
   MatCardModule,
-  MatGridListModule
+  MatGridListModule,
+  MatChipsModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -25,6 +26,7 @@ import { PostItemComponent } from './post-item/post-item.component';
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
+    MatChipsModule,
     FlexLayoutModule
   ],
   declarations: [
