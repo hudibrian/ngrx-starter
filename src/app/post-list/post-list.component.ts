@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 @Component({
@@ -8,4 +8,5 @@ import { Observable } from 'rxjs/Rx';
 })
 export class PostListComponent {
   @Input() posts: Observable<any>;
+  @Output() pageChange: EventEmitter<number> = new EventEmitter<number>();
 }

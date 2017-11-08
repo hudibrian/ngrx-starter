@@ -1,10 +1,9 @@
 .post-list {
-  height: 100vh;
   overflow-y: auto;
 }
 
 .hn-post-card {
-  margin: 5px 10px 5px 10px !important;
+  margin: 70px 10px 5px 10px !important;
   background-color: #ddd;
   color: #333;
 }

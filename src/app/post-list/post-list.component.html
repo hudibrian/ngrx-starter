@@ -1,9 +1,18 @@
-<div class="post-list">
-  <mat-card class="hn-post-card">
-    <ol>
-      <li *ngFor="let post of (posts | async)">
-        <span>{{post.title}}</span>
-      </li>
-    </ol>
-  </mat-card>
+<div class="post-list" fxLayout='row' fxLayoutAlign='center'>
+  <div fxFlex.gt-sm='50%' fxFlex.xs='100%'>
+    <mat-card class="hn-post-card">
+      <ol>
+        <li *ngFor="let post of (posts | async)">
+          <post-item [post]='post'></post-item>
+        </li>
+      </ol>
+      <div>
+        <a href="">
+          <!-- TODO: add pagination functionality to these and make these buttons -->
+          < Prev</a>
+            &nbsp;
+            <a href="">More ></a>
+      </div>
+    </mat-card>
+  </div>
 </div>

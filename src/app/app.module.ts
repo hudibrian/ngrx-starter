@@ -16,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HackerNewsServiceService } from './services/hacker-news/hacker-news.service';
 import { Http, HttpModule } from '@angular/http';
+import { PostItemComponent } from './post-item/post-item.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { Http, HttpModule } from '@angular/http';
     AppComponent,
     PostContainerComponent,
     PostListComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostItemComponent
   ],
   providers: [HttpModule, HackerNewsServiceService],
   bootstrap: [AppComponent]

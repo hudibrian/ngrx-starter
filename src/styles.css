@@ -2,5 +2,9 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body {
-  overflow: hidden !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  color: #673ab7;
 }
