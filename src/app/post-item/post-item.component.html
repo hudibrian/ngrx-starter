@@ -1,11 +1,16 @@
 <div>
   <div>
     <a class="title" [href]="post.url">{{post.title}}</a>
-    <span class="domain">({{post.domain}})</span>
+    <span class="domain" *ngIf="post.domain">({{post.domain}})</span>
   </div>
-  <small>
+  <small *ngIf="post.points">
     <b>
-      {{post.points + ' points | '}} by
+      {{post.points + ' points | '}}
+    </b>
+  </small>
+  <small *ngIf="post.user">
+    <b>
+      by
       <a href="">{{post.user}}</a>
     </b>
   </small>

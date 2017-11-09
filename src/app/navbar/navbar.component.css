@@ -7,10 +7,11 @@
   height: 20px !important;
 }
 
-.nav-link {
-  color: white;
+.custom-nav-link {
+  cursor: pointer;
+  color: rgba(230, 230, 230, 1);
 }
 
-.nav-link:hover {
-  color: yellow;
+.custom-nav-link:hover {
+  color: rgba(255, 255, 255, 1);
 }

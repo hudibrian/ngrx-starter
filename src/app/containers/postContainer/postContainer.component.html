@@ -1,1 +1,1 @@
-<post-list [posts]="posts"></post-list>
+<post-list [posts]="(posts | async)" [feedType]="feed" [page]="page"></post-list>

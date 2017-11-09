@@ -1,17 +1,14 @@
 <div fxLayout="row" fxLayoutAlign="center">
-  <mat-toolbar fxFlex.gt-sm="60%" fxFlex.xs="100%" class="hn-nav" color="primary" role="header">
-    <span fxFlex='1 1 20%'> Hacker News </span>
+  <mat-toolbar fxFlex.gt-sm="61%" fxFlex.xs="100%" class="hn-nav" color="primary" role="header">
+    <span class="custom-nav-link" fxFlex.gt-md='1 1 20%' fxFlex.sm='1 1 auto' [routerLink]="['/news', 1]"> Hacker News </span>
     <div fxFlex='1 1 auto'>
-      <small>new</small>
+      <small class="custom-nav-link" [routerLink]="['/newest', 1]">new</small>
       <small>|</small>
-      <small>show</small>
+      <small class="custom-nav-link" [routerLink]="['/show', 1]">show</small>
       <small>|</small>
-      <small>ask</small>
+      <small class="custom-nav-link" [routerLink]="['/ask', 1]">ask</small>
       <small>|</small>
-      <small>jobs</small>
+      <small class="custom-nav-link" [routerLink]="['/jobs', 1]">jobs</small>
     </div>
-    <small>
-      <a class="nav-link" href="https://news.ycombinator.com">Hacker News Official</a>
-    </small>
   </mat-toolbar>
 </div>

@@ -1,17 +1,18 @@
 <div class="post-list" fxLayout='row' fxLayoutAlign='center'>
   <div fxFlex.gt-sm='60%' fxFlex.xs='100%'>
-    <mat-card class="hn-post-card">
-      <ol>
-        <li *ngFor="let post of (posts | async)">
-          <post-item [post]='post'></post-item>
-        </li>
-      </ol>
-      <div>
-        <a href="">
-          <!-- TODO: add pagination functionality to these and make these buttons -->
-          < Prev</a>
-            &nbsp;
-            <a href="">More ></a>
+    <mat-card class="hn-post-card" [ngStyle.xs]="{'margin-top': '55px'}">
+      <div *ngIf="posts !== null">
+        <ol start="{{listStart}}">
+          <li *ngFor="let post of posts">
+            <post-item [post]='post'></post-item>
+          </li>
+        </ol>
+        <div>
+          <a *ngIf="listStart !== 1" [routerLink]="['/' + feedType, page - 1]" routerLinkActive="active">
+            < Prev</a>
+              &nbsp;
+              <a *ngIf="posts.length === 30" [routerLink]="['/' + feedType, page + 1]" routerLinkActive="active">More ></a>
+        </div>
       </div>
     </mat-card>
   </div>

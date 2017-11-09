@@ -7,6 +7,13 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent {
-  @Input() posts: Observable<any>;
-  @Output() pageChange: EventEmitter<number> = new EventEmitter<number>();
+  @Input() posts: any;
+  @Input() feedType: string;
+  @Input() page: number;
+
+  listStart: number = 1;
+
+  ngOnChanges() {
+    this.listStart = (this.page - 1) * 30 + 1;
+  }
 }

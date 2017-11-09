@@ -8,4 +8,5 @@ small {
 
 .domain {
   color: gray;
+  word-wrap: break-word;
 }

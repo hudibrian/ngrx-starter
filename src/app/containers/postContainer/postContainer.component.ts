@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { Component } from '@angular/core';
 import { HackerNewsServiceService } from '../../services/hacker-news/hacker-news.service';
@@ -9,9 +10,25 @@ import { HackerNewsServiceService } from '../../services/hacker-news/hacker-news
 })
 export class PostContainerComponent {
   posts: Observable<any>;
-  constructor(private _hnService: HackerNewsServiceService) {}
+  feed: string;
+  page: number;
+
+  constructor(
+    private _hnService: HackerNewsServiceService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.posts = this._hnService.getFeed('news', 1);
+    this.route.data.subscribe(data => {
+      this.feed = data['feedType'];
+      this.route.params.subscribe(params => {
+        this.page = +params['page'];
+        this.getPosts(this.feed, this.page);
+      });
+    });
+  }
+
+  getPosts(feedType: string, pageNumber: number) {
+    this.posts = this._hnService.getFeed(feedType, pageNumber);
   }
 }
