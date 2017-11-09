@@ -18,16 +18,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HackerNewsServiceService } from './services/hacker-news/hacker-news.service';
 import { Http, HttpModule } from '@angular/http';
 import { PostItemComponent } from './post-item/post-item.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
+    RouterModule,
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
     MatChipsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule.forRoot(routes)
   ],
   declarations: [
     AppComponent,
@@ -36,6 +40,7 @@ import { PostItemComponent } from './post-item/post-item.component';
     NavbarComponent,
     PostItemComponent
   ],
+  exports: [RouterModule],
   providers: [HttpModule, HackerNewsServiceService],
   bootstrap: [AppComponent]
 })
