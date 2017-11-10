@@ -1,6 +1,13 @@
 <div fxLayout="row" fxLayoutAlign="center">
   <mat-toolbar fxFlex.gt-sm="61%" fxFlex.xs="100%" class="hn-nav" color="primary" role="header">
-    <span class="custom-nav-link" fxFlex.gt-md='1 1 20%' fxFlex.sm='1 1 auto' [routerLink]="['/news', 1]"> Hacker News </span>
+    <span class="custom-nav-link" fxFlex.gt-md='1 1 20%' fxFlex.sm-xs='1 1 10%' [routerLink]="['/news', 1]">
+      <span fxHide.sm="{{true}}" fxHide.xs="{{true}}">
+        Hacker News
+      </span>
+      <span fxHide.gt-sm="{{true}}">
+        HN
+      </span>
+    </span>
     <div fxFlex='1 1 auto'>
       <small class="custom-nav-link" [routerLink]="['/newest', 1]">new</small>
       <small>|</small>

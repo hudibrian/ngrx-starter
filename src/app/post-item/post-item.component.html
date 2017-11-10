@@ -10,7 +10,7 @@
 <small *ngIf="post.user">
   <b>
     by
-    <a href="">{{post.user}}</a>
+    <a [routerLink]="['/user', post.user]">{{post.user}}</a>
   </b>
 </small>
 <small>

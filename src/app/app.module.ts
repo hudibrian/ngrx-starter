@@ -21,6 +21,7 @@ import { PostItemComponent } from './post-item/post-item.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ContentLayoutComponent } from './content-layout-component/content-layout.component';
+import { UserDetailContainerComponent } from './containers/userDetailContainer/user-detail-container.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { ContentLayoutComponent } from './content-layout-component/content-layou
     PostListComponent,
     NavbarComponent,
     PostItemComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    UserDetailContainerComponent
   ],
   exports: [RouterModule],
   providers: [HttpModule, HackerNewsServiceService],

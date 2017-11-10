@@ -16,12 +16,18 @@ export class HackerNewsServiceService {
       .map(this.extractData);
   }
 
+  getUser(userId: string) {
+    return this._http
+      .get(`${this.baseUrl}/user/${userId}`)
+      .map(this.extractData);
+  }
+
   private extractData(res: Response) {
-    let body = res.json(); // If response is text use text()
+    const body = res.json();
     if (body) {
       return body;
     } else {
-      return {};
+      return res.text;
     }
   }
 }
