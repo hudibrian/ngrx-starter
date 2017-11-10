@@ -1,0 +1,9 @@
+<div *ngIf="user">
+  <span class="user-title">{{user.id}}</span>
+  <span class="karma">{{user.karma + ' karma'}}</span>
+  <div class="account-created">
+    <b>Account Created: {{user.created}}</b>
+  </div>
+  <div class="about" [innerHTML]="user.about">
+  </div>
+</div>

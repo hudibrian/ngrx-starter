@@ -22,6 +22,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ContentLayoutComponent } from './content-layout-component/content-layout.component';
 import { UserDetailContainerComponent } from './containers/userDetailContainer/user-detail-container.component';
+import { UserDetailItemComponent } from './user-detail-item/user-detail-item.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { UserDetailContainerComponent } from './containers/userDetailContainer/u
     NavbarComponent,
     PostItemComponent,
     ContentLayoutComponent,
-    UserDetailContainerComponent
+    UserDetailContainerComponent,
+    UserDetailItemComponent
   ],
   exports: [RouterModule],
   providers: [HttpModule, HackerNewsServiceService],
