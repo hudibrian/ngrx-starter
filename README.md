@@ -8,9 +8,6 @@ Then run the following commands (You must have @angular/cli installed globally):
 - ng serve --open
 
 ## TODO:
-- [x] implement routes and routing to handle the different pages within the application
-- [x] update the template to display jobs correctly
-- [ ] create the com ponents for viewing a comment page for a post and the user profile page
 - [ ] add loading indicator
 - [ ] refactor and make sure that container components are properly handling the state of the application
 - [ ] refactor any html that can be moved to a stateless component
