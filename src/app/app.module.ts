@@ -20,6 +20,7 @@ import { Http, HttpModule } from '@angular/http';
 import { PostItemComponent } from './post-item/post-item.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { ContentLayoutComponent } from './content-layout-component/content-layout.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { routes } from './app.routes';
     PostContainerComponent,
     PostListComponent,
     NavbarComponent,
-    PostItemComponent
+    PostItemComponent,
+    ContentLayoutComponent
   ],
   exports: [RouterModule],
   providers: [HttpModule, HackerNewsServiceService],

@@ -2,13 +2,14 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { Component } from '@angular/core';
 import { HackerNewsServiceService } from '../../services/hacker-news/hacker-news.service';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'post-container',
   templateUrl: './postContainer.component.html',
   styleUrls: ['./postContainer.component.css']
 })
-export class PostContainerComponent {
+export class PostContainerComponent implements OnInit {
   posts: Observable<any>;
   feed: string;
   page: number;
