@@ -3,12 +3,12 @@
   <div *ngIf="item.type === 'poll'" class="pollResults">
     <div *ngFor="let pollResult of item.poll" class="pollContent">
       <div [innerHTML]="pollResult.content"></div>
-      <div class="subtext">{{pollResult.points}} points</div>
+      <div>{{pollResult.points}} points</div>
       <div class="pollBar" [ngStyle]="{'width': pollResult.points/item.poll_votes_count*100+'%'}"></div>
     </div>
   </div>
-  <p class="subject" [innerHTML]="item.content"></p>
-  <ul class="comment-list">
+  <p [innerHTML]="item.content"></p>
+  <ul>
     <li *ngFor="let comment of item.comments">
       <item-details-comments [comment]="comment"></item-details-comments>
     </li>

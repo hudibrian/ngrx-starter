@@ -13,7 +13,7 @@ import { Component, OnInit, Input } from '@angular/core';
     </div>
     <div class="content" [hidden]="collapse">
       <p class="comment-text" [innerHTML]="comment.content"></p>
-      <ul class="subtree">
+      <ul>
         <li *ngFor="let subComment of comment.comments">
           <item-details-comments [comment]="subComment"></item-details-comments>
         </li>

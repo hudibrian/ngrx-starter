@@ -3,6 +3,21 @@
   margin-bottom: 1em;
 }
 
+.pollResults {
+  margin-bottom: 1em;
+}
+
+.pollContent {
+  padding-bottom: 0;
+  margin-bottom: -1em;
+  margin-top: 1em;
+}
+
+.pollContent .pollBar {
+  height: 10px;
+  margin-bottom: 1em;
+}
+
 ul {
   list-style: none;
 }
