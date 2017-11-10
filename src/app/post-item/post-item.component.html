@@ -1,5 +1,6 @@
 <div>
-  <a class="title" [href]="post.url">{{post.title}}</a>
+  <a class="title" *ngIf="hasUrl" [href]="post.url">{{post.title}}</a>
+  <a class="title" *ngIf="!hasUrl" [routerLink]="['/item', post.id]">{{post.title}}</a>
   <span class="domain" *ngIf="post.domain">({{post.domain}})</span>
 </div>
 <small *ngIf="post.points">
@@ -21,7 +22,7 @@
 <small *ngIf="feedType !== 'jobs'">
   <b>
     |
-    <a href=""> {{post.comments_count + ' comments'}}</a>
+    <a [routerLink]="['/item', post.id]"> {{post.comments_count + ' comments'}}</a>
   </b>
 </small>
 <hr>

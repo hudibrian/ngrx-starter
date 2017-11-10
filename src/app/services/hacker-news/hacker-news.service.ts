@@ -22,6 +22,12 @@ export class HackerNewsServiceService {
       .map(this.extractData);
   }
 
+  getComments(postId: string) {
+    return this._http
+      .get(`${this.baseUrl}/item/${postId}`)
+      .map(this.extractData);
+  }
+
   private extractData(res: Response) {
     const body = res.json();
     if (body) {

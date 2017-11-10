@@ -12,4 +12,8 @@ export class PostItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  get hasUrl(): boolean {
+    return this.post.url.indexOf('http') === 0;
+  }
 }

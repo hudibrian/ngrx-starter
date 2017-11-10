@@ -23,6 +23,9 @@ import { routes } from './app.routes';
 import { ContentLayoutComponent } from './content-layout-component/content-layout.component';
 import { UserDetailContainerComponent } from './containers/userDetailContainer/user-detail-container.component';
 import { UserDetailItemComponent } from './user-detail-item/user-detail-item.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
+import { ItemDetailsContainerComponent } from './containers/commentsContainer/item-details-container.component';
+import { ItemDetailsCommentsComponent } from './item-details/item-details-comments/item-details-comments.component';
 
 @NgModule({
   imports: [
@@ -44,7 +47,10 @@ import { UserDetailItemComponent } from './user-detail-item/user-detail-item.com
     PostItemComponent,
     ContentLayoutComponent,
     UserDetailContainerComponent,
-    UserDetailItemComponent
+    UserDetailItemComponent,
+    ItemDetailsContainerComponent,
+    ItemDetailsComponent,
+    ItemDetailsCommentsComponent
   ],
   exports: [RouterModule],
   providers: [HttpModule, HackerNewsServiceService],

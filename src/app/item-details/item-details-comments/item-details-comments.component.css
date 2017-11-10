@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+}
+
+.collapsable {
+  cursor: pointer;
+}
+
+.collapsable:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-left: 15px;
+  border-left: dotted 1px #673ab7;
+}
+
+.comment-text {
+  margin-left: 5px;
+}

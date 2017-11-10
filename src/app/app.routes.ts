@@ -2,6 +2,7 @@ import { PostContainerComponent } from './containers/postContainer/postContainer
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserDetailContainerComponent } from './containers/userDetailContainer/user-detail-container.component';
+import { ItemDetailsContainerComponent } from './containers/commentsContainer/item-details-container.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'user/:id',
     component: UserDetailContainerComponent
+  },
+  {
+    path: 'item/:id',
+    component: ItemDetailsContainerComponent
   },
   { path: '', redirectTo: 'news/1', pathMatch: 'full' },
   { path: '**', redirectTo: 'news/1' }
