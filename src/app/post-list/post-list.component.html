@@ -4,7 +4,7 @@
       <div *ngIf="posts !== null">
         <ol start="{{listStart}}">
           <li *ngFor="let post of posts">
-            <post-item [post]='post'></post-item>
+            <post-item [post]="post" [feedType]="feedType"></post-item>
           </li>
         </ol>
         <div>

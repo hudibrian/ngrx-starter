@@ -8,10 +8,14 @@ Then run the following commands (You must have @angular/cli installed globally):
 - ng serve --open
 
 ## TODO:
-- [ ] implement routes and routing to handle the different pages within the application
-- [ ] create the components for viewing a comment page for a post
-- [ ] create the different components for displaying the jobs list content
+- [x] implement routes and routing to handle the different pages within the application
+- [x] update the template to display jobs correctly
+- [ ] create the com ponents for viewing a comment page for a post and the user profile page
 - [ ] refactor and make sure that container components are properly handling the state of the application
 - [ ] refactor any html that can be moved to a stateless component
 - [ ] create blog post on stateless components in angular
 - [ ] start adding ngrx/store in such a way to prepare for presentation on the 14th
+- [ ] set up branches related to tuesdays presentation. Using ngrx/store for the 
+      application, and then creating a step by step guide how to add ngrx store 
+      to just new components when the app doesn't have store already, and then
+      add a guide to upgrading existing components to use ngrx/store.

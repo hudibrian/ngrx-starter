@@ -16,12 +16,13 @@
   </small>
   <small>
     <b>
-      {{post.time_ago + ' | '}}
+      {{post.time_ago}}
     </b>
   </small>
-  <small>
+  <small *ngIf="feedType !== 'jobs'">
     <b>
-      <a href="">{{post.comments_count + ' comments'}}</a>
+      |
+      <a href=""> {{post.comments_count + ' comments'}}</a>
     </b>
   </small>
   <hr>

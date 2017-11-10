@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostItemComponent implements OnInit {
   @Input() post: any;
+  @Input() feedType: string;
 
   constructor() {}
 
