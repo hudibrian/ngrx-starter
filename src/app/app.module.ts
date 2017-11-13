@@ -26,6 +26,8 @@ import { UserDetailItemComponent } from './user-detail-item/user-detail-item.com
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemDetailsContainerComponent } from './containers/commentsContainer/item-details-container.component';
 import { ItemDetailsCommentsComponent } from './item-details/item-details-comments/item-details-comments.component';
+import { metaReducer } from './store/store';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   imports: [
@@ -37,7 +39,8 @@ import { ItemDetailsCommentsComponent } from './item-details/item-details-commen
     MatGridListModule,
     MatChipsModule,
     FlexLayoutModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({ reducer: metaReducer })
   ],
   declarations: [
     AppComponent,
