@@ -11,7 +11,8 @@ import {
   MatToolbarModule,
   MatCardModule,
   MatGridListModule,
-  MatChipsModule
+  MatChipsModule,
+  MatButtonModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -28,6 +29,8 @@ import { ItemDetailsContainerComponent } from './containers/commentsContainer/it
 import { ItemDetailsCommentsComponent } from './item-details/item-details-comments/item-details-comments.component';
 import { metaReducer } from './store/store';
 import { StoreModule } from '@ngrx/store';
+import { PostItemActionsComponent } from './post-item-actions/post-item-actions.component';
+import { PostItemActionsContainerComponent } from './containers/postItemActionContainer/post-item-action.container';
 
 @NgModule({
   imports: [
@@ -37,7 +40,7 @@ import { StoreModule } from '@ngrx/store';
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
-    MatChipsModule,
+    MatButtonModule,
     FlexLayoutModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({ reducer: metaReducer })
@@ -53,7 +56,9 @@ import { StoreModule } from '@ngrx/store';
     UserDetailItemComponent,
     ItemDetailsContainerComponent,
     ItemDetailsComponent,
-    ItemDetailsCommentsComponent
+    ItemDetailsCommentsComponent,
+    PostItemActionsComponent,
+    PostItemActionsContainerComponent
   ],
   exports: [RouterModule],
   providers: [HttpModule, HackerNewsServiceService],
