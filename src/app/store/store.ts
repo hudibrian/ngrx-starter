@@ -1,6 +1,5 @@
 import { reducers } from './reducers';
-import { compose } from '@ngrx/core';
-import { combineReducers } from '@ngrx/store';
+import { combineReducers, compose } from '@ngrx/store';
 import { storeLogger } from 'ngrx-store-logger';
 import { environment } from '../../environments/environment';
 
