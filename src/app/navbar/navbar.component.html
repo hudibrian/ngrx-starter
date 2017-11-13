@@ -8,7 +8,7 @@
         HN
       </span>
     </span>
-    <div fxFlex='1 1 auto'>
+    <div class="links" fxFlex='1 1 auto'>
       <small class="custom-nav-link" [routerLink]="['/newest', 1]">new</small>
       <small>|</small>
       <small class="custom-nav-link" [routerLink]="['/show', 1]">show</small>
@@ -16,6 +16,9 @@
       <small class="custom-nav-link" [routerLink]="['/ask', 1]">ask</small>
       <small>|</small>
       <small class="custom-nav-link" [routerLink]="['/jobs', 1]">jobs</small>
+    </div>
+    <div fxFlex='1 1 auto' fxLayoutAlign="end">
+      <button mat-button>{{(favoriteCount | async) + ' Favorites'}}</button>
     </div>
   </mat-toolbar>
 </div>

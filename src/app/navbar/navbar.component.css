@@ -15,3 +15,7 @@
 .custom-nav-link:hover {
   color: rgba(255, 255, 255, 1);
 }
+
+.links {
+  margin-left: 10px;
+}

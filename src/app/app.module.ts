@@ -12,7 +12,8 @@ import {
   MatCardModule,
   MatGridListModule,
   MatChipsModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -31,10 +32,14 @@ import { metaReducer } from './store/store';
 import { StoreModule } from '@ngrx/store';
 import { PostItemActionsComponent } from './post-item-actions/post-item-actions.component';
 import { PostItemActionsContainerComponent } from './containers/postItemActionContainer/post-item-action.container';
-
+import { EffectsModule } from '@ngrx/effects';
+import { PostItemActionsEffects } from './store/effects/post-item-action.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     RouterModule,
     MatToolbarModule,
@@ -42,8 +47,13 @@ import { PostItemActionsContainerComponent } from './containers/postItemActionCo
     MatGridListModule,
     MatButtonModule,
     FlexLayoutModule,
+    MatSnackBarModule,
     RouterModule.forRoot(routes),
-    StoreModule.forRoot({ reducer: metaReducer })
+    StoreModule.forRoot({ reducer: metaReducer }),
+    EffectsModule.forRoot([PostItemActionsEffects]),
+    !environment.production
+      ? StoreDevtoolsModule.instrument({ maxAge: 50 })
+      : []
   ],
   declarations: [
     AppComponent,
