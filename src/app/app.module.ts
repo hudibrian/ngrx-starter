@@ -47,9 +47,8 @@ import {
     FlexLayoutModule,
     MatSnackBarModule,
     RouterModule.forRoot(routes),
-    StoreModule.forRoot({ routerReducer: routerReducer, reducer: metaReducer }),
+    StoreModule.forRoot({ reducer: metaReducer }),
     EffectsModule.forRoot([PostItemActionsEffects]),
-    StoreRouterConnectingModule,
     !environment.production
       ? StoreDevtoolsModule.instrument({ maxAge: 50 })
       : []
