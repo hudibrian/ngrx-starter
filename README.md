@@ -1,6 +1,6 @@
 # HN Angular/NGRX Clone
 
-``` 
+```
 Blog post on adding ngrx as a state container to existing projects
 http://brianhudi.org/2017/11/15/adding-ngrx-to-existing-projects-is-easy/
 ```
