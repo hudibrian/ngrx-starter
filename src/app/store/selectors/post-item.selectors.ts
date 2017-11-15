@@ -1,4 +1,4 @@
-import { createSelector } from '@ngrx/store/src/selector';
+import { createSelector } from '@ngrx/store';
 
 import * as fromPostItems from '../reducers/post-item.reducer';
 import { AppState } from '../store';

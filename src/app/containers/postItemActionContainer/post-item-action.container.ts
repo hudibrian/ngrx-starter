@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import * as fromStore from '../../store/store';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
@@ -28,14 +27,10 @@ export class PostItemActionsContainerComponent implements OnInit {
   }
 
   addRemoveFavorite() {
-    let action;
-
-    if (!this.favorite) {
-      action = new AddToFavoritesAction(this.id);
-    } else {
-      action = new RemoveFromFavoritesAction(this.id);
-    }
-
-    this.store.dispatch(action);
+    this.store.dispatch(
+      this.favorite
+        ? new RemoveFromFavoritesAction(this.id)
+        : new AddToFavoritesAction(this.id)
+    );
   }
 }
